@@ -32,7 +32,9 @@ jobs:
       run: sudo /etc/init.d/mysql start
     - name: Install cliente mysql
       run: sudo apt-get install mysql-client
+    - name: Liberar acesso
+      run: GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'sua_senha'
     - name: Criar tabelas
-      run: sudo mysql -h localhost --host=localhost --user=root usersdb < estrutura.sql
+      run: mysql -h localhost --host=localhost --user=root usersdb < estrutura.sql
     - name: Run tests
       run: npm test

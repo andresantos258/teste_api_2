@@ -33,6 +33,6 @@ jobs:
     - name: Install cliente mysql
       run: sudo apt-get install mysql-client
     - name: Criar tabelas
-      run: sudo mysql --host=localhost --user=roota --password=aloha usersdb < estrutura.sql
+      run: sudo mysql -u root usersdb < estrutura.sql
     - name: Run tests
       run: npm test

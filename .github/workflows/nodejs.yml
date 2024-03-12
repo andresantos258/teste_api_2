@@ -33,8 +33,8 @@ jobs:
     - name: Install cliente mysql
       run: sudo apt-get install mysql-client
     - name: Liberar acesso
-      run: sudo -i
+      run: sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'sua_senha'"
     - name: Criar tabelas
-      run: mysql -h localhost --host=localhost --user=root usersdb < estrutura.sql
+      run: mysql --host=localhost -u -p usersdb < estrutura.sql
     - name: Run tests
       run: npm test

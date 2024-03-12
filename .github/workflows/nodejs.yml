@@ -33,7 +33,7 @@ jobs:
     - name: Install cliente mysql
       run: sudo apt-get install mysql-client
     - name: Liberar acesso
-      run: GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'sua_senha'
+      run: sudo -i
     - name: Criar tabelas
       run: mysql -h localhost --host=localhost --user=root usersdb < estrutura.sql
     - name: Run tests

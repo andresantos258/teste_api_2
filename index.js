@@ -8,8 +8,8 @@ const port = 3000;
 // Configuração do MySQL
 const connection = mysql.createConnection({
   host: 'localhost',
-user: 'roota', // Seu nome de usuário do MySQL
-password: 'a', // Sua senha do MySQL
+user: 'root', // Seu nome de usuário do MySQL
+password: 'aloha', // Sua senha do MySQL
 database: 'usersdb'
 //  user: process.env.MYSQL_USER, // Usa variáveis de ambiente
   // password: process.env.MYSQL_PASSWORD,
@@ -60,7 +60,7 @@ app.get('/users/:id', (req, res) => {
 
 
 // Iniciar o servidor
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
 

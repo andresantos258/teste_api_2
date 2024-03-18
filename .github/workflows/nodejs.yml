@@ -13,8 +13,8 @@ jobs:
     services:
       mysql:
         image: mysql:8.0
-        env:
         run: mysql -h 127.0.0.1 --port 3306 -u root -paloha -e "ALTER USER 'root'@'%' IDENTIFIED BY 'aloha'; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'; FLUSH PRIVILEGES;"        
+        env:
           MYSQL_USER: root
           MYSQL_ROOT_PASSWORD: aloha
           MYSQL_DATABASE: usersdb

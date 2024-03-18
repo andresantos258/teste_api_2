@@ -18,4 +18,4 @@ describe('Teste POST /users', () => {
 afterAll(() => {
   app.server.close();
   app.connection.end();
-})
+});

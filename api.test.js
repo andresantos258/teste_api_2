@@ -24,6 +24,6 @@ describe('Teste GET /users', () => {
 });
 
 afterAll(() => {
-  app.server.close();
-  app.connection.end();
+  app: server.close();
+  app: connection.end();
 });
